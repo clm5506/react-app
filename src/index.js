@@ -1,12 +1,11 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React from "react";
+import ReactDOM from "react-dom";
 
-ReactDOM.render(<App />, document.getElementById('root'));
+//hello world is a jsx expression
+const element = <h1> Hello World</h1>;
+// Babel will compile down the above to a call to React.createElement;
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+console.log(element);
+
+//first arg is the element to be rendered, second arg is where in the real dom it's located
+ReactDOM.render(element, document.getElementById("root"));
